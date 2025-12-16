@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Kyle Berkson" />
+  <title>Kyle Berkson</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#fff0e4',
+            dark: '#1A2E40',
+            accent: '#FFF8DC',
+            navy: '#003366',
+            mutedLight: '#94a3b8',  /* for dark backgrounds - ~5:1 contrast */
+            mutedDark: '#6b5c4c',   /* for cream backgrounds - ~5:1 contrast */
+            link: '#598bcc'
+          },
+          fontFamily: {
+            sans: ['"Proxima Nova"', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @font-face {
+      font-family: 'Proxima Nova';
+      src: url(assets/fonts/proximanova_regular.ttf) format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Proxima Nova';
+      src: url(assets/fonts/proximanova_bold.otf) format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+</head>
+
+<body class="bg-cream font-sans antialiased">
+
+  <!-- Header stripe -->
+  <header class="bg-dark py-10 md:py-12">
+    <div class="max-w-[900px] mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4 md:gap-12">
+        <div></div>
+        <div>
+          <h1 class="text-[2.2em] md:text-[2.5em] text-accent font-bold leading-tight mb-4">Kyle Berkson</h1>
+          <p class="text-[0.95em] text-accent/70 mb-1">
+            <span class="text-mutedLight">email:</span> 
+            <a href="mailto:kyleberkson@gmail.com" class="text-link hover:text-accent transition-colors">kyleberkson@gmail.com</a>
+          </p>
+          <p class="text-[0.95em] text-accent/70">
+            <span class="text-mutedLight">let's connect:</span>
+            <a href="https://github.com/khyyle" target="_blank" rel="noopener" class="hover:text-accent transition-colors">github</a>,
+            <a href="https://www.linkedin.com/in/kyle-berkson-275660290/" target="_blank" rel="noopener" class="hover:text-accent transition-colors">linkedin</a>,
+            <a href="kyle_berkson_resume.pdf" target="_blank" rel="noopener" class="hover:text-accent transition-colors">resume</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+    <!-- About (cream) -->
+    <section class="bg-cream py-10 md:py-14">
+      <div class="max-w-[900px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4 md:gap-12">
+          <p class="text-[0.85em] text-mutedDark md:text-right">about</p>
+          
+          <div class="max-w-[640px] text-[1.05em] leading-[1.85] text-dark">
+            <!-- Portrait (floated) -->
+            <img 
+              src="assets/portraits/extreme_zest.JPG" 
+              alt="Kyle Berkson"
+              class="float-right ml-6 mb-4 w-36 h-36 md:w-44 md:h-44 object-cover rounded-sm"
+            />
+            
+            <p class="mb-5">
+              I'm a sophomore at Caltech studying applied math and computer science.
+            </p>
+            
+            <p class="mb-5">
+              Currently, I'm a co-founder at <a href="https://nexa.farm" target="_blank" rel="noopener" class="text-link hover:text-navy underline decoration-link/40 hover:decoration-navy underline-offset-2 transition-colors">Nexa</a> (YC S25), where we're building microchips and an end-to-end platform for cattle health monitoring and early disease detection.
+            </p>
+
+            <p class="mb-5">
+              I like building scalable ML systems and pipelines, especially where mathematical structure shapes the implementation. Lately that's meant signal processing, probabilistic inference, and deep learning across broad applications.
+            </p>
+
+            <p class="text-[0.95em] leading-[1.85] text-dark/70">
+              When I'm not at my computer, you can usually find me running, lifting, or playing Clash Royale.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background (dark) -->
+    <section class="bg-dark py-10 md:py-14">
+      <div class="max-w-[900px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4 md:gap-12">
+          <p class="text-[0.85em] text-mutedLight md:text-right">background</p>
+          <div class="max-w-[560px] text-[0.95em] leading-[1.9] text-accent/80 space-y-2">
+            <p>Uncertainty quantification research (SURF) @ <span class="text-accent">Caltech</span></p>
+            <p>Machine learning engineer @ <a href="https://shiboleth.ai/" target="_blank" rel="noopener" class="text-link hover:text-accent transition-colors">Shiboleth</a><span class="text-accent"> (YC W24)</span></p>
+            <p>Open-source bioreactor development @ <a href="https://biomade.org" target="_blank" rel="noopener" class="text-link hover:text-accent transition-colors">BioMADE</a><span class="text-accent"> / University of Utah</span></p>
+            <p>Smart running shoe research project @ <span class="text-accent">University of Cambridge</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
