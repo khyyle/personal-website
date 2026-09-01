@@ -15,10 +15,8 @@
             cream: '#fff0e4',
             dark: '#1A2E40',
             accent: '#FFF8DC',
-            navy: '#003366',
             mutedLight: '#94a3b8',  /* for dark backgrounds - ~5:1 contrast */
-            mutedDark: '#6b5c4c',   /* for cream backgrounds - ~5:1 contrast */
-            link: '#598bcc'
+            mutedDark: '#6b5c4c'    /* for cream backgrounds - ~5:1 contrast */
           },
           fontFamily: {
             sans: ['"Proxima Nova"', 'ui-sans-serif', 'system-ui', '-apple-system', 'sans-serif']
@@ -43,6 +41,19 @@
       font-style: normal;
       font-display: swap;
     }
+
+    .site-link {
+      text-decoration: underline;
+      text-decoration-color: color-mix(in srgb, currentColor 30%, transparent);
+      text-underline-offset: 2px;
+      transition: color 150ms ease, text-decoration-color 150ms ease;
+    }
+    .site-link:hover {
+      text-decoration-color: color-mix(in srgb, currentColor 70%, transparent);
+    }
+    .bg-dark .site-link:hover {
+      color: #FFF8DC;
+    }
   </style>
 </head>
 
@@ -57,12 +68,12 @@
           <h1 class="text-[2.2em] md:text-[2.5em] text-accent font-bold leading-tight mb-4">Kyle Berkson</h1>
           <p class="text-[0.95em] text-accent/70 mb-1">
             <span class="text-mutedLight">email:</span> 
-            <a class=" transition-colors">kyleberkson [at] gmail [dot] com</a>
+            <span>kyleberkson [at] gmail [dot] com</span>
           </p>
           <p class="text-[0.95em] text-accent/70">
             <span class="text-mutedLight">let's connect:</span>
-            <a href="https://github.com/khyyle" target="_blank" rel="noopener" class="hover:text-accent transition-colors">github</a>,
-            <a href="https://www.linkedin.com/in/kyle-berkson-275660290/" target="_blank" rel="noopener" class="hover:text-accent transition-colors">linkedin</a>
+            <a href="https://github.com/khyyle" target="_blank" rel="noopener" class="site-link">github</a>,
+            <a href="https://www.linkedin.com/in/kyle-berkson-275660290/" target="_blank" rel="noopener" class="site-link">linkedin</a>
           </p>
         </div>
       </div>
@@ -90,7 +101,7 @@
             </p>
             
             <p class="mb-5">
-              Currently, I'm a co-founder at <a href="https://nexa.farm" target="_blank" rel="noopener" class="text-link hover:text-navy underline decoration-link/40 hover:decoration-navy underline-offset-2 transition-colors">Nexa</a> (YC S25), where we're building microchips and an end-to-end platform for cattle health monitoring and early disease detection.
+              Currently, I'm a co-founder at <a href="https://nexa.farm" target="_blank" rel="noopener" class="site-link">Nexa</a> (YC S25), where we're building microchips and an end-to-end platform for cattle health monitoring and early disease detection.
             </p>
 
             <p class="mb-5">
@@ -112,8 +123,8 @@
           <p class="text-[0.85em] text-mutedLight md:text-right">background</p>
           <div class="max-w-[560px] text-[0.95em] leading-[1.9] text-accent/80 space-y-2">
             <p>Uncertainty quantification research (SURF) @ <span class="text-accent">Caltech</span></p>
-            <p>Machine learning engineer @ <a href="https://shiboleth.ai/" target="_blank" rel="noopener" class="text-link hover:text-accent transition-colors">Shiboleth</a><span class="text-accent"> (YC W24)</span></p>
-            <p>Open-source bioreactor development @ <a href="https://biomade.org" target="_blank" rel="noopener" class="text-link hover:text-accent transition-colors">BioMADE</a><span class="text-accent"> / University of Utah</span></p>
+            <p>Machine learning engineer @ <a href="https://shiboleth.ai/" target="_blank" rel="noopener" class="site-link">Shiboleth</a><span class="text-accent"> (YC W24)</span></p>
+            <p>Open-source bioreactor development @ <a href="https://biomade.org" target="_blank" rel="noopener" class="site-link">BioMADE</a><span class="text-accent"> / University of Utah</span></p>
             <p>Smart running shoe research project @ <span class="text-accent">University of Cambridge</span></p>
           </div>
         </div>
